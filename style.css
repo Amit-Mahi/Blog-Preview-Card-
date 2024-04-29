@@ -1,0 +1,118 @@
+:root {
+    --primary-yellow: hsl(47, 88%, 63%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey: hsl(0, 0%, 50%);
+    --neutral-black: hsl(0, 0%, 7%);
+
+    --font-size: 16px;
+
+    --fontWeight-mid: 500;
+    --fontWeight-bold: 800;
+
+    --font-family:"Figtree", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-yellow);
+    box-sizing: border-box;
+}
+
+main{
+    background-color: var(--neutral-white);
+    width: 17.5%;
+    outline: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px;
+}
+
+.image {
+    border-radius: 10px;
+    padding: 7px auto 10px auto;
+    margin-bottom: 1.5rem;
+}
+
+span {
+    background-color: var(--primary-yellow);
+    padding: 7px 10px;
+    font-weight: var(--fontWeight-bold);
+    font-size: 14px;
+    border-radius: 5px;
+}
+.published-date {
+    color: var(--neutral-black);
+    font-weight: var(--fontWeight-mid);
+    margin-top: 1.3rem;
+}
+
+h1 {
+    color: var(--primary-yellow);
+    font-size: 1.5rem;
+    font-weight: var(--fontWeight-bold);
+    cursor: pointer ;
+}
+p{
+    color: var(--neutral-grey);
+    font-weight: var(--fontWeight-mid);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-info > img {
+    width: 35px
+}
+.profile-info > p {
+    color: black;
+    font-weight: var(--fontWeight-bold);
+    font-size: 14px;
+}
+
+/* media query for 375 px screen resolution (Compatible for Mobile Screen) */
+
+@media (max-width: 375px ) {
+    .image {
+        height: 200px;
+        width: 275px;
+        object-fit: cover;
+        
+    }
+
+    .main {
+        width: 73%;
+    }
+
+    span {
+        font-weight: var(--fontWeight-bold);
+        font-size: 0.90rem;
+    }
+    .published-date {
+        font-size: 0.80rem;
+        font-weight: var(--fontWeight-mid);
+    }
+
+    h1{
+        color:hsl(0, 0%, 7%);
+        font-size: 1.2rem;
+        font-weight: var(--fontWeight-bold);
+    }
+    p{
+        font-size: 0.80rem;
+        color: var(--neutral-grey);
+    }
+
+    .profile-info {
+        margin-top: 1.3rem;
+    }
+}
